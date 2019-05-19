@@ -129,7 +129,7 @@ public class AutoSlideView extends FrameLayout implements ViewPager.OnPageChange
 
     }
 
-    public void setData(Context context, String[] photoList, BannerPhotoListener bannerPhotoListener) {
+    public void setData(Context context, Integer[] photoList, BannerPhotoListener bannerPhotoListener) {
 
         mBannerPhotoListener = bannerPhotoListener;
 
@@ -414,7 +414,7 @@ public class AutoSlideView extends FrameLayout implements ViewPager.OnPageChange
 
     public interface BannerPhotoListener {
 
-        void setImageResource(List<View> mItems, ImageView imageView, String imageUrl);
+        void setImageResource(List<View> mItems, ImageView imageView, int imageResource);
 
         void onItemClick(int position);
     }

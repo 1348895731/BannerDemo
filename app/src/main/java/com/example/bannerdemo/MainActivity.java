@@ -28,10 +28,17 @@ public class MainActivity extends AppCompatActivity {
     private void initBanner() {
         mAsvBanner.init(true);
 
+        Integer[] pics = new Integer[3];
+        //轮播图
+        for (int i = 0; i <3; i++) {
+            pics[i] = R.mipmap.timg;
+        }
+
         mAsvBanner.setData(this, pics, new AutoSlideView.BannerPhotoListener() {
 
             @Override
-            public void setImageResource(List<View> items, ImageView imageView, String imageUrl) {
+            public void setImageResource(List<View> items, ImageView imageView, int imageUrl) {
+                imageView.setImageResource(imageUrl);
             }
 
             @Override
